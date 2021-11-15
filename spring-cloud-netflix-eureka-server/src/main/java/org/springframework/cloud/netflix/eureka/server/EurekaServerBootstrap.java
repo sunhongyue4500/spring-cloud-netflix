@@ -49,6 +49,7 @@ public class EurekaServerBootstrap {
 
 	protected EurekaClientConfig eurekaClientConfig;
 
+	// 参考：https://www.iocoder.cn/Eureka/instance-registry-class-diagram/?self
 	protected PeerAwareInstanceRegistry registry;
 
 	protected volatile EurekaServerContext serverContext;
@@ -113,6 +114,7 @@ public class EurekaServerBootstrap {
 
 		log.info("Initialized server context");
 
+		// 注册数量
 		// Copy registry from neighboring eureka node
 		int registryCount = this.registry.syncUp();
 		this.registry.openForTraffic(this.applicationInfoManager, registryCount);

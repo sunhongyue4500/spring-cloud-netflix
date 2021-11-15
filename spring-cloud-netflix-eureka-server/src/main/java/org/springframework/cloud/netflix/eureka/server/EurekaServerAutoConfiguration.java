@@ -95,6 +95,7 @@ public class EurekaServerAutoConfiguration implements WebMvcConfigurer {
 	@Autowired
 	private EurekaClientConfig eurekaClientConfig;
 
+	// 这里注入了EurekaClient
 	@Autowired
 	private EurekaClient eurekaClient;
 
